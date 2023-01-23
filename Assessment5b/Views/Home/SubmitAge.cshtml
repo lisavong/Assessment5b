@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Assessment5b.Models.SubmitAgeModel
+
+<label asp-for="Age"></label>
+
+<h1>@Model.Age</h1>
+<h2>Able to fly? @Model.CanFly</h2>
+
+
+
+@if (Model.CanFly==true)
+{
+
+    <div class="text-center">
+    <h2 class="display-4">Great! Select your spaceship.</h2>
+    <p class="h3"></p>
+
+        <p> <input type="radio" /> <label> Blue Blazer</label> </p>
+        <p> <input type="radio" /> <label> Grass Glider</label> </p>
+        <p> <input type="radio" /> <label> Folk Flyer</label> </p>
+                 
+    </div>
+}

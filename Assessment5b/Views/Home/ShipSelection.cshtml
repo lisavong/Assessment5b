@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "ShipSelection";
+}
+@model Assessment5b.Models.SpaceshipSelectionModel
+
+<h1>ShipSelection</h1>
+@*
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipSelection)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipSelection)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+
+@if (Model.CanFly==true)
+{
+
+        <div class="text-center">
+        <h2 class="display-4">Great! Select your spaceship.</h2>
+        <p class="h3"></p>
+
+            <p> <input type="radio" /> <label> Blue Blazer</label> </p>
+            <p> <input type="radio" /> <label> Grass Glider</label> </p>
+            <p> <input type="radio" /> <label> Folk Flyer</label> </p>
+
+        </div>
+}
